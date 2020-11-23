@@ -1,0 +1,18 @@
+<?php
+include_once('admin.php');
+class Runner_events extends Admin {
+	private $param = array();
+	
+	function __construct(){
+	
+	}
+	function FIRST(){
+		$data = array("successmsg"=>"Welcome to your RunningPH account!");
+
+		Load::view('admin/runner_events_vw',$data);
+		Load::hook_js('modal');
+	}
+
+
+
+}
